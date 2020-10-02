@@ -1,0 +1,41 @@
+h1, h2 {font-family: monospace; text-align: center;}
+body {font-family: monospace;font-size: 18pt; color: white;}
+a {color: white;}
+
+.basic-grid {
+
+display: grid;
+gap: 1rem;
+text-align: center;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+}
+
+.card {
+background-color: rgba(0,0,0,0.5);
+padding-bottom: 1rem;
+}
+
+.card input {
+background-color: rgba(0,0,0,0.5);
+color: white;
+border: 1px;
+border-style: solid;
+border-color: #1d81f2;
+font-size: 18pt;
+font-family: monospace;
+text-align: center;
+autocomplete=off;
+}
+
+.card input:hover{
+color: #1d81f2;
+transition: 200ms ease;
+}
+.card input:focus{
+color: #1d81f2;
+transition: 200ms ease;
+}
+a:hover {
+color: #1d81f2;
+transition: 200ms ease;
+}
