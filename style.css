@@ -12,8 +12,22 @@ text-align: center;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 }
 
+/*set background image based on screen size*/
+@media (max-width: 599px) {
+    body{
+        background-image: url("cpunk1.jpg");
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+	background-image: url('minearth.png');
+    }
+}
+/*######################################################*/
+
 .card {
-background-color: rgba(0,0,0,0.5);
+/*background-color: rgba(0,0,0,0.5);*/
 padding-bottom: 1rem;
 }
 
@@ -45,4 +59,4 @@ transition: 200ms ease;
 } 
 .card > ul > li:hover > ul  { display: block;
 font-size: 12pt; }
-.hideme {text-align: left;}
+.hideme {text-align: center;}
