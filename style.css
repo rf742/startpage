@@ -3,6 +3,12 @@ body {font-family: monospace;font-size: 18pt; color: white;}
 a {color: white;}
 
 
+#web-search
+{
+	display: block;
+	text-align: center;
+}
+
 
 .basic-grid {
 
@@ -33,7 +39,7 @@ text-align: center;
 padding-bottom: 1rem;
 }
 
-.card input {
+input {
 background-color: rgba(0,0,0,0.5);
 color: white;
 border: 1px;
@@ -43,11 +49,11 @@ font-size: 18pt;
 font-family: monospace;
 text-align: center;
 }
-.card input:hover{
+input:hover{
 color: #1d81f2;
 transition: 200ms ease;
 }
-.card input:focus{
+input:focus{
 color: #1d81f2;
 transition: 200ms ease;
 }
@@ -55,7 +61,7 @@ a:hover {
 color: #1d81f2;
 transition: 200ms ease;
 }
-
+/* code to make it so sublists on cards dont show until parent is hovered over 
 .card > ul > li > ul {
 	display: none;
 } 
@@ -63,3 +69,4 @@ transition: 200ms ease;
 font-size: 12pt; 
 }
 .hideme {text-align: left;}
+*/

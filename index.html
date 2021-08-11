@@ -16,19 +16,16 @@ function init(){startTime(); greet();}
 		
 	<h1 id="greeting"></h1>
 	<h2 id="clock"></h2>
-	<section class="basic-grid">
+	<div id="web-search">
+	<form action="https://duckduckgo.com/" method="get" target="_blank" autocomplete="off">
+    	<input type="text" name="q" placeholder="DuckDuckGo"/>
+	</form>
+	</div>
+	
+<section class="basic-grid">
 
 <div class="card">
-	<h3>search</h3>
-<form action="https://www.google.com/search" method="get" target="_blank" autocomplete="off">
-    <input type="text" name="q" placeholder="google" />
-</form>
-<form action="https://www.scryfall.com/search" method="get" target="_blank" autocomplete="off">
-    <input type="text" name="q" placeholder="scryfall" />
-</form>
-</div>
-<div class="card">
-<h2>docs</h2>
+<h2>CS docs</h2>
     <form action="https://doc.rust-lang.org/std/index.html" method="get" target=_blank autocomplete="off">
       <input type="text" name="search" placeholder="rust docs" />
     </form>
@@ -52,21 +49,25 @@ function init(){startTime(); greet();}
 <div class="card">
 	<h3>links</h3>
 	<ul>
-		<li><a href="https://reddit.com" target="_blank">reddit</a>
-		  <ul class="hideme">
-		    <li><a href="https://reddit.com/r/datahoarder" target="_blank">datahoarder</a></li>
-		  </ul> 
-                </li>
-		<li><a href="https://youtube.com" target="_blank">youtube</a>
-		  <ul class="hideme">
-		   <li><a href="https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg" target="_blank">DistroTube</a></li>	
-		   <li><a href="https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA" target="_blank">LukeSmith</a></li>	
-		  </ul>
+		<li><a href="https://reddit.com" target="_blank">reddit</a></li>
+		<li><a href="https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA" target="_blank">LukeSmith</a></li>	
 		</li>
 		<li><a href="https://xkcd.com" target="_blank">xkcd</a></li>
 		<li><a href="https://rf742.github.io/me" target="_blank">my-site</a></li>
       		<li><a href="https://github.com" target="_blank">github</a></li>
       		<li><a href="https://duolingo.com" target="_blank">duolingo</a></li>
+	</ul>
+</div>
+<div class="card">
+	<h3>magic</h3>
+	
+<form action="https://www.scryfall.com/search" method="get" target="_blank" autocomplete="off">
+    <input type="text" name="q" placeholder="scryfall" />
+</form>
+	<ul>
+      		<li><a href="https://scryfall.com/@edh86/decks/" target="_blank">My Decks</a></li>
+      		<li><a href="https://tcgplayer.com" target="_blank">tcgplayer</a></li>
+      		<li><a href="https://cardkingdom.com" target="_blank">cardkingdom</a></li>
 	</ul>
 </div>
 
