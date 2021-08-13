@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<script src="greet.js"></script>
 	<script src="clock.js"></script>
+	<script src="script.js"></script>
 	<script charset="utf-8">
 function init(){startTime(); greet();}
 	</script>
@@ -25,7 +26,7 @@ function init(){startTime(); greet();}
 <section class="basic-grid">
 
 <div class="card">
-<h2>CS docs</h2>
+<h2>cs docs</h2>
     <form action="https://doc.rust-lang.org/std/index.html" method="get" target=_blank autocomplete="off">
       <input type="text" name="search" placeholder="rust docs" />
     </form>
@@ -35,15 +36,18 @@ function init(){startTime(); greet();}
     </form>
     
     <form action="https://manpages.ubuntu.com/cgi-bin/search.py" method="get" target=_blank autocomplete="off">
-      <input type="text" name="q" placeholder="ubuntu man pages" />
+      <input type="text" name="q" placeholder="ubuntu manpages" />
     </form>
     
     <form action="https://wiki.archlinux.org/" method="get" target=_blank autocomplete="off">
       <input type="text" name="search" placeholder="archwiki" />
     </form>
-<form action="https://www.stackoverflow.com/search" method="get" target=_blank autocomplete="off">
-    <input type="text" name="q" placeholder="stackoverflow" />
-</form>
+    <form action="https://www.stackoverflow.com/search" method="get" target=_blank autocomplete="off">
+      <input type="text" name="q" placeholder="stackoverflow" />
+    </form>
+    <form autocomplete="off" onsubmit="bsd()">
+      <input id="openBSD" type="text" name="" placeholder="openBSD manpages" />
+    </form>
 </div>
 
 <div class="card">
