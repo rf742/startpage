@@ -1,4 +1,4 @@
-const LIST_ITEMS = [
+const social = [
 {
 	"name": "reddit",
 	"link": "https://reddit.com"
@@ -23,18 +23,18 @@ const LIST_ITEMS = [
 ]
 
 
-function test(l) {
-	let cont = document.getElementById("listcontainer");
-	for(var item in l) {
+function generateList(list, containerID) {
+	let cont = document.getElementById(containerID);
+	for(var item in list) {
 		var li = document.createElement('li');
 		var a = document.createElement("a");
-		a.href = LIST_ITEMS[item]["link"]
-		a.appendChild(document.createTextNode(LIST_ITEMS[item]["name"]));
+		a.href = list[item]["link"]
+		a.appendChild(document.createTextNode(list[item]["name"]));
 		a.setAttribute("target", "_blank")	
 		console.log("a: " + a)
 		li.appendChild(a);
 		cont.appendChild(li);
-		console.log("it ran")
 	}
 }
-test(LIST_ITEMS)
+
+generateList(social, "social-list-container")
