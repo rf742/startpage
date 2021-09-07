@@ -4,8 +4,8 @@ const social = [
 	"link": "https://reddit.com"
 },
 {
-	"name": "LukeSmith",
-	"link": "https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA"
+	"name": "luke smith",
+	"link": "https://lukesmith.xyz"
 },
 {
 	"name": "me",
@@ -19,9 +19,26 @@ const social = [
 	"name": "github",
 	"link": "https://github.com"
 },
-
 ]
 
+const linuxyoutube = [
+{
+	"name": "brodie robertson",
+	"link": "https://www.youtube.com/c/BrodieRobertson/videos"
+},
+{
+	"name": "luke smith",
+	"link": "https://www.youtube.com/c/lukesmithxyz/videos"
+},
+{
+	"name": "distro tube",
+	"link": "https://www.youtube.com/c/DistroTube/videos"
+},
+{
+	"name": "mental outlaw",
+	"link": "https://www.youtube.com/c/MentalOutlaw/videos"
+},
+]
 
 function generateList(list, containerID, title) {
 	let cont = document.getElementById(containerID);
@@ -43,6 +60,7 @@ function generateList(list, containerID, title) {
 }
 
 generateList(social, "socially", "social")
+generateList(linuxyoutube, "ltube", "youtube - linux")
 
 //below allows me to see generated html to debug
 //console.log(document.getElementsByTagName('html')[0].innerHTML);
