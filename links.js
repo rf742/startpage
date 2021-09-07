@@ -23,8 +23,13 @@ const social = [
 ]
 
 
-function generateList(list, containerID) {
+function generateList(list, containerID, title) {
 	let cont = document.getElementById(containerID);
+	let header = document.createElement('h3')
+	let ul = document.createElement('ul')
+	header.appendChild(document.createTextNode(title))
+	cont.appendChild(header);
+	cont.appendChild(ul);
 	for(var item in list) {
 		var li = document.createElement('li');
 		var a = document.createElement("a");
@@ -33,8 +38,11 @@ function generateList(list, containerID) {
 		a.setAttribute("target", "_blank")	
 		console.log("a: " + a)
 		li.appendChild(a);
-		cont.appendChild(li);
+		ul.appendChild(li);
 	}
 }
 
-generateList(social, "social-list-container")
+generateList(social, "socially", "social")
+
+//below allows me to see generated html to debug
+//console.log(document.getElementsByTagName('html')[0].innerHTML);
