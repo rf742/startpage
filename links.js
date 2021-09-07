@@ -40,11 +40,36 @@ const linuxyoutube = [
 },
 ]
 
-function generateList(list, containerID, title) {
+const reddit = [
+{
+	"name": "unixporn",
+	"link": "https://www.reddit.com/r/unixporn"
+},
+{
+	"name": "startpages",
+	"link": "https://www.reddit.com/r/startpages"
+},
+{
+	"name": "datahoarder",
+	"link": "https://www.reddit.com/r/datahoarder"
+},
+]
+
+
+function generateList(list, containerID, title, titleLink) {
 	let cont = document.getElementById(containerID);
 	let header = document.createElement('h3')
 	let ul = document.createElement('ul')
-	header.appendChild(document.createTextNode(title))
+	if (arguments.length == 4) {
+		// if there is a fourth argument, the title should be clickable
+		// and link to the url given as the fourth argument
+		var titleA = document.createElement('a')
+		titleA.href = titleLink;
+		titleA.appendChild(document.createTextNode(title))
+		titleA.setAttribute("target", "_blank")
+		header.appendChild(titleA)
+	}
+	else {header.appendChild(document.createTextNode(title))}
 	cont.appendChild(header);
 	cont.appendChild(ul);
 	for(var item in list) {
@@ -53,14 +78,14 @@ function generateList(list, containerID, title) {
 		a.href = list[item]["link"]
 		a.appendChild(document.createTextNode(list[item]["name"]));
 		a.setAttribute("target", "_blank")	
-		console.log("a: " + a)
 		li.appendChild(a);
 		ul.appendChild(li);
 	}
 }
 
 generateList(social, "socially", "social")
+generateList(reddit, "reddit", "reddit", "https://reddit.com")
 generateList(linuxyoutube, "ltube", "youtube - linux")
 
 //below allows me to see generated html to debug
-//console.log(document.getElementsByTagName('html')[0].innerHTML);
+console.log(document.getElementsByTagName('html')[0].innerHTML);
