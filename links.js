@@ -55,6 +55,20 @@ const reddit = [
 },
 ]
 
+const literature = [
+{
+	"name": "archive",
+	"link": "https://archive.org"
+},
+{
+	"name": "the latin library",
+	"link": "http://www.thelatinlibrary.com"
+},
+{
+	"name": "project gutenberg",
+	"link": "https://www.gutenberg.org"
+},
+]
 
 function generateList(list, containerID, title, titleLink) {
 	let cont = document.getElementById(containerID);
@@ -86,6 +100,7 @@ function generateList(list, containerID, title, titleLink) {
 generateList(social, "socially", "social")
 generateList(reddit, "reddit", "reddit", "https://reddit.com")
 generateList(linuxyoutube, "ltube", "youtube - linux")
+generateList(literature, "lit", "lit")
 
 //below allows me to see generated html to debug
 console.log(document.getElementsByTagName('html')[0].innerHTML);
