@@ -13,6 +13,12 @@ body {font-family: monospace;font-size: 18pt; color: var(--c3);}
 a {color: var(--c3);}
 
 
+::placeholder{
+color: black;
+opacity: 1;
+
+}
+
 #web-search
 {
 	display: block;

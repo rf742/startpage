@@ -19,77 +19,44 @@ function init(){startTime(); greet();}
 	<h2 id="clock"></h2>
 
 	<div id="web-search">
-	  <form action="https://duckduckgo.com/" method="get" target="_blank" autocomplete="off">
-    	    <input type="text" name="q" placeholder="DuckDuckGo"/>
-	  </form>
+    		<form autocomplete="off" onsubmit="get_search()">
+			<input id="searcher" type="text" name="" placeholder="search" />
+		</form>
 	</div>
 	
 <section class="basic-grid">
 
-<div class="card">
-
-<h3>cs docs</h2>
-
-    <form action="https://doc.rust-lang.org/std/index.html" method="get" target=_blank autocomplete="off">
-      <input type="text" name="search" placeholder="rust docs" />
-    </form>
-		
-    <form action="https://docs.python.org/3.9/search.html" method="get" target=_blank autocomplete="off">
-      <input type="text" name="q" placeholder="py 3.9 docs" />
-    </form>
-    
-    <form action="https://wiki.archlinux.org/" method="get" target=_blank autocomplete="off">
-      <input type="text" name="search" placeholder="archwiki" />
-    </form>
-
-    <form action="https://www.stackoverflow.com/search" method="get" target=_blank autocomplete="off">
-      <input type="text" name="q" placeholder="stackoverflow" />
-    </form>
-    
-    <form action="https://manpages.ubuntu.com/cgi-bin/search.py" method="get" target=_blank autocomplete="off">
-      <input type="text" name="q" placeholder="ubuntu manpages" />
-    </form>
-
-    <form autocomplete="off" onsubmit="bsd()">
-      <input id="openBSD" type="text" name="" placeholder="openBSD manpages" />
-    </form>
-
-</div>
 
 <div class="card">
 	<div id="socially"></div>
 	</div>
 </div>
+
 <div class="card">
 	<div id="reddit"></div>
 	</div>
 </div>
+
 <div class="card">
 	<div id="ltube"></div>
 	</div>
 </div>
+
 <div class="card">
 	<div id="lit"></div>
 	</div>
 </div>
-<div class="card">	
-<h3>magic</h3>
-	
-  <form action="https://www.scryfall.com/search" method="get" target="_blank" autocomplete="off">
-    <input type="text" name="q" placeholder="scryfall" />
-  </form>
-	
-  <ul>
 
+<div class="card">	
+  <h3>magic</h3>	
+  <ul>
     <li><a href="https://scryfall.com/@edh86/decks/" target="_blank">My Decks</a></li>
     <li><a href="https://tcgplayer.com" target="_blank">tcgplayer</a></li>
     <li><a href="https://cardkingdom.com" target="_blank">cardkingdom</a></li>
-
   </ul>
-
 </div>
 
-	<script src="links.js"></script>
+<script src="links.js"></script>
 </section>
 </body>
 </html>
