@@ -44,6 +44,10 @@ background-color: var(--c2);}
 padding-bottom: 1rem;
 }
 
+#helpCard {
+visibility: hidden;
+}
+
 input {
 background-color: var(--c2);
 color: var(--c3);

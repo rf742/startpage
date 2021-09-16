@@ -19,7 +19,7 @@ function init(){startTime(); greet();}
 	<h2 id="clock"></h2>
 
 	<div id="web-search">
-    		<form autocomplete="off" onsubmit="get_search()">
+    		<form autocomplete="off" onsubmit="get_search();return false;">
 			<input id="searcher" type="text" name="" placeholder="search" />
 		</form>
 	</div>
@@ -56,6 +56,10 @@ function init(){startTime(); greet();}
   </ul>
 </div>
 
+<div class="card" id=helpCard>
+	<p>help</p>
+	<button type="submit" onclick="document.getElementById('helpCard').style.visibility='hidden';">hide</button>
+</div>
 <script src="links.js"></script>
 </section>
 </body>

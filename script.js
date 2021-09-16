@@ -1,44 +1,68 @@
+
+var searchkeys = [
+	{
+		"code":"-o",
+		"url":"man.openbsd.org/",
+		"help":"Search openBSD man pages"
+	},
+	{
+		"code":"-y",
+		"url":"www.youtube.com/results?search_query=",
+		"help":"Search YouTube"
+	},
+	{
+		"code":"-a",
+		"url":"wiki.archlinux.org/?search=",
+		"help":"Search the archwiki"
+	},
+	{
+		"code":"-p",
+		"url":"docs.python.org/3.9/search.html?q=",
+		"help":"Search the python docs"
+	},
+	{
+		"code":"-u",
+		"url":"manpages.ubuntu.com/cgi-bin/search.py?q=",
+		"help":"Search Ubuntu man pages"
+	},
+	{
+		"code":"-r",
+		"url":"doc.rust-lang.org/std/index.html?search=",
+		"help":"Search the Rust docs"
+	},
+	{
+		"code":"-s",
+		"url":"www.stackoverflow.com/search?q=",
+		"help":"Search stackoverflow"
+	},
+	{
+		"code":"-d",
+		"url":"duckduckgo.com/?q=",
+		"help":"Search DuckDuckGo"
+	},
+	{
+		"code":"-m",
+		"url":"scryfall.com/search?q=",
+		"help":"Search Scryfall"
+	},
+]
+
 function get_search() {
 	var stringy = document.getElementById("searcher").value;
-	var code = stringy.substr(0,2);
+	var indicator = stringy.substr(0,2);
 	var searchstr = stringy.substr(2);
 	var burl = 'https://';
-	var success = 1//is changed to zero in switch if no valid code found
-	switch (code) {
-		case '-o':
-			burl += 'man.openbsd.org/';
-			break;
-		case '-y':
-			console.log('found -y!');
-			burl += 'www.youtube.com/results?search_query=';
-			break;
-		case '-a':
-			burl += 'wiki.archlinux.org/?search=';
-			break;
-		case '-p':
-			burl += 'docs.python.org/3.9/search.html?q=';
-			break;
-		case '-u':
-			burl += 'manpages.ubuntu.com/cgi-bin/search.py?q='
-			break;
-		case '-r':
-			burl += 'doc.rust-lang.org/std/index.html?search='
-			break;
-		case '-s':
-			burl += 'www.stackoverflow.com/search?q='
-			break;
-		case '-d':
-			burl += 'duckduckgo.com/?q='
-			break;
-		case '-m':
-			burl += 'scryfall.com/search?q='
-			break;
-		default: 
-			success = 0 //0 code tells me no match;		
+	let correctURL = searchkeys.find(correctURL => correctURL.code === indicator);
+	if (correctURL == null) {
+		document.getElementById("searcher").placeholder='invalid, see help';
+		helpCard.style.visibility='visible'
 	}
-	if (success == 1) {
-		burl += searchstr;
-		window.open(burl)
+	else{ //if good input, open new window, and set placeholder back to
+		// 'search' to clear help message if previous submissions
+		// brought up error messages
+		let completeURL = burl+correctURL.url+searchstr;
+		window.open(completeURL)
+		document.getElementById("searcher").placeholder='search'
 	}
-	
+	document.getElementById("searcher").value=''
 }
