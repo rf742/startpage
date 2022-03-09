@@ -1,26 +1,3 @@
-const social = [
-{
-	"name": "reddit",
-	"link": "https://reddit.com"
-},
-{
-	"name": "luke smith",
-	"link": "https://lukesmith.xyz"
-},
-{
-	"name": "me",
-	"link": "https://rf742.github.io/me"
-},
-{
-	"name": "xkcd",
-	"link": "https://xkcd.com"
-},
-{
-	"name": "github",
-	"link": "https://github.com"
-},
-]
-
 const linuxyoutube = [
 {
 	"name": "brodie robertson",
@@ -40,20 +17,7 @@ const linuxyoutube = [
 },
 ]
 
-const reddit = [
-{
-	"name": "unixporn",
-	"link": "https://www.reddit.com/r/unixporn"
-},
-{
-	"name": "startpages",
-	"link": "https://www.reddit.com/r/startpages"
-},
-{
-	"name": "datahoarder",
-	"link": "https://www.reddit.com/r/datahoarder"
-},
-]
+
 
 const literature = [
 {
@@ -97,8 +61,6 @@ function generateList(list, containerID, title, titleLink) {
 	}
 }
 
-generateList(social, "socially", "social")
-generateList(reddit, "reddit", "reddit", "https://reddit.com")
 generateList(linuxyoutube, "ltube", "youtube - linux")
 generateList(literature, "lit", "lit")
 

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>Homepage</title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	<script src="greet.js"></script>
 	<script src="clock.js"></script>
 	<script src="script.js"></script>
@@ -28,13 +29,61 @@ function init(){startTime(); greet();}
 
 
 <div class="card">
-	<div id="socially"></div>
+	<h3>social</h3>
+	<div id="socially">
+	<ul x-data="{ social: [
+	{
+		name: 'reddit',
+		link: 'https://reddit.com'
+	},
+	{
+		name: 'luke smith',
+		link: 'https://lukesmith.xyz'
+	},
+	{
+		name: 'me',
+		link: 'https://rf742.github.io/me'
+	},
+	{
+		name: 'xkcd',
+		link: 'https://xkcd.com'
+	},
+	{
+		name: 'github',
+		link: 'https://github.com'
+	},
+	]}">
+
+	<template x-for="thing in social">
+		<li><a x-text="thing.name" target="_blank" x-bind:href="thing.link"></a></li>
+	</template>
+	</ul>
 	</div>
 </div>
 
 <div class="card">
-	<div id="reddit"></div>
+	<h3>reddit</h3>
+	<div id="reddit">
+	<ul x-data="{ reddit: [
+		{
+			name: 'unixporn',
+			link: 'https://www.reddit.com/r/unixporn'
+		},
+		{
+			name: 'startpages',
+			link: 'https://www.reddit.com/r/startpages'
+		},
+		{
+			name: 'datahoarder',
+			link: 'https://www.reddit.com/r/datahoarder'
+		},
+		]}">
+	<template x-for="thing in reddit">
+		<li><a x-text="thing.name" x-bind:href="thing.link"></a></li>
+	</template>
+	</ul>
 	</div>
+
 </div>
 
 <div class="card">
