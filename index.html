@@ -8,7 +8,7 @@
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	<script src="greet.js"></script>
 	<script src="clock.js"></script>
-	<script src="script.js"></script>
+	
 	<script charset="utf-8">
 function init(){startTime(); greet();}
 	</script>
@@ -87,7 +87,30 @@ function init(){startTime(); greet();}
 </div>
 
 <div class="card">
+	<h3>youtube - linux</h3>
 	<div id="ltube"></div>
+	<ul x-data="{ linuxyoutube: [
+		{
+			name: 'brodie robertson',
+			link: 'https://www.youtube.com/c/BrodieRobertson/videos'
+		},
+		{
+			name: 'luke smith',
+			link: 'https://www.youtube.com/c/lukesmithxyz/videos'
+		},
+		{
+			name: 'distro tube',
+			link: 'https://www.youtube.com/c/DistroTube/videos'
+		},
+		{
+			name: 'mental outlaw',
+			link: 'https://www.youtube.com/c/MentalOutlaw/videos'
+		},
+		]}">
+	<template x-for="thing in linuxyoutube">
+		<li><a x-text="thing.name" x-bind:href="thing.link"></a></li>
+	</template>
+	</ul>
 	</div>
 </div>
 
@@ -105,11 +128,15 @@ function init(){startTime(); greet();}
   </ul>
 </div>
 
-<div class="card" id=helpCard>
-	<p>help</p>
+<div class="card" id="helpCard">
+	<h3>help</h3>
+	<ul id="helpobjects">
+
+	</ul>
 	<button type="submit" onclick="document.getElementById('helpCard').style.visibility='hidden';">hide</button>
 </div>
 <script src="links.js"></script>
+<script src="script.js"></script>
 </section>
 </body>
 </html>

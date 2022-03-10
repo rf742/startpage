@@ -66,3 +66,13 @@ function get_search() {
 	}
 	document.getElementById("searcher").value=''
 }
+
+function addtotile(ulid, data){
+	var basestring = ""
+	data.forEach(element => basestring += '<li>' + `${element.code}: ${element.help}` + '</li>')
+	document.getElementById('helpobjects').innerHTML = basestring
+}
+//}
+
+addtotile('helpobjects', searchkeys)
+

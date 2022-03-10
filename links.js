@@ -61,7 +61,6 @@ function generateList(list, containerID, title, titleLink) {
 	}
 }
 
-generateList(linuxyoutube, "ltube", "youtube - linux")
 generateList(literature, "lit", "lit")
 
 //below allows me to see generated html to debug
