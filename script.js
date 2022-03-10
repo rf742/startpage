@@ -46,6 +46,77 @@ var searchkeys = [
 		"help":"Search Scryfall"
 	},
 ]
+var social = [
+	{
+		name: 'reddit',
+		link: 'https://reddit.com'
+	},
+	{
+		name: 'luke smith',
+		link: 'https://lukesmith.xyz'
+	},
+	{
+		name: 'me',
+		link: 'https://rf742.github.io/me'
+	},
+	{
+		name: 'xkcd',
+		link: 'https://xkcd.com'
+	},
+	{
+		name: 'github',
+		link: 'https://github.com'
+	},
+]
+
+var reddit = [
+	{
+		name: 'unixporn',
+		link: 'https://www.reddit.com/r/unixporn'
+	},
+	{
+		name: 'startpages',
+		link: 'https://www.reddit.com/r/startpages'
+	},
+	{
+		name: 'datahoarder',
+		link: 'https://www.reddit.com/r/datahoarder'
+	},
+]
+
+var ltube = [
+	{
+		name: 'brodie robertson',
+		link: 'https://www.youtube.com/c/BrodieRobertson/videos'
+	},
+	{
+		name: 'luke smith',
+		link: 'https://www.youtube.com/c/lukesmithxyz/videos'
+	},
+	{
+		name: 'distro tube',
+		link: 'https://www.youtube.com/c/DistroTube/videos'
+	},
+	{
+		name: 'mental outlaw',
+		link: 'https://www.youtube.com/c/MentalOutlaw/videos'
+	},
+]
+
+const literature = [
+	{
+		"name": "archive",
+		"link": "https://archive.org"
+	},
+	{
+		"name": "the latin library",
+		"link": "http://www.thelatinlibrary.com"
+	},
+	{
+		"name": "project gutenberg",
+		"link": "https://www.gutenberg.org"
+	},
+	]
 
 function get_search() {
 	var stringy = document.getElementById("searcher").value;
@@ -67,12 +138,22 @@ function get_search() {
 	document.getElementById("searcher").value=''
 }
 
-function addtotile(ulid, data){
+function addtohelp(ulid, data){
 	var basestring = ""
 	data.forEach(element => basestring += '<li>' + `${element.code}: ${element.help}` + '</li>')
-	document.getElementById('helpobjects').innerHTML = basestring
+	document.getElementById(ulid).innerHTML = basestring
 }
 //}
 
-addtotile('helpobjects', searchkeys)
+function addtotile(ulid, data){
+	var basestring = ""
+	data.forEach(element => basestring +=`<li><a href="${element.link}" target="_blank">${element.name}</a></li>`)
+	document.getElementById(ulid).innerHTML = basestring
+}
+addtotile('socially', social)
+addtotile('reddit', reddit)
+addtotile('ltube',ltube)
+addtotile('lit', literature)
+addtohelp('helpobjects', searchkeys)
+
 

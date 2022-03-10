@@ -71,3 +71,7 @@ a:hover {
 color: var(--c1);
 transition: 200ms ease;
 }
+
+ul#helpobjects li{
+	font-size: 12pt;
+}
