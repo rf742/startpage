@@ -105,24 +105,24 @@ var ltube = [
 
 const literature = [
 	{
-		"name": "archive",
-		"link": "https://archive.org"
+		name: 'archive',
+		link: "https://archive.org"
 	},
 	{
-		"name": "the latin library",
-		"link": "http://www.thelatinlibrary.com"
+		name: 'the latin library',
+		link: 'http://www.thelatinlibrary.com'
 	},
 	{
-		"name": "project gutenberg",
-		"link": "https://www.gutenberg.org"
+		name: 'project gutenberg',
+		link: 'https://www.gutenberg.org'
 	},
-	]
+]
 
 function get_search() {
 	var stringy = document.getElementById("searcher").value;
 	var indicator = stringy.substr(0,2);
 	var searchstr = stringy.substr(2);
-	var burl = 'https://';
+	var baseurl = 'https://';
 	let correctURL = searchkeys.find(correctURL => correctURL.code === indicator);
 	if (correctURL == null) {
 		document.getElementById("searcher").placeholder='invalid, see help';
@@ -131,7 +131,7 @@ function get_search() {
 	else{ //if good input, open new window, and set placeholder back to
 		// 'search' to clear help message if previous submissions
 		// brought up error messages
-		let completeURL = burl+correctURL.url+searchstr;
+		let completeURL = baseurl+correctURL.url+searchstr;
 		window.open(completeURL)
 		document.getElementById("searcher").placeholder='search'
 	}
