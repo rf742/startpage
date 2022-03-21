@@ -45,6 +45,11 @@ var searchkeys = [
 		"url":"scryfall.com/search?q=",
 		"help":"Search Scryfall"
 	},
+	{
+		"code":"-b",
+		"url":"gutenberg.org/ebooks/search/?query=",
+		"help":"Search Project Gutenberg"
+	},
 ]
 var social = [
 	{
