@@ -126,7 +126,7 @@ const literature = [
 function get_search() {
 	var stringy = document.getElementById("searcher").value;
 	var indicator = stringy.substr(0,2);
-	var searchstr = stringy.substr(2);
+	var searchstr = stringy.substr(2).trimStart();
 	var baseurl = 'https://';
 	let correctURL = searchkeys.find(correctURL => correctURL.code === indicator);
 	if (correctURL == null) {
