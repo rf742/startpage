@@ -17,7 +17,7 @@ var searchkeys = [
 	},
 	{
 		"code":"-p",
-		"url":"docs.python.org/3.9/search.html?q=",
+		"url":"docs.python.org/3.10/search.html?q=",
 		"help":"Search the python docs"
 	},
 	{
