@@ -9,3 +9,10 @@ function startTime() {
 function checkTime(i){
 	return i<10 ? "0" + i : i;
 }
+
+var dat = new Date();
+dat = dat.getHours();
+if (dat < 6 || dat > 20) {
+document.getElementById("mycheckbox").checked = true;
+document.documentElement.setAttribute('data-theme', 'dark');
+}
