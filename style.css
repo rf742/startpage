@@ -5,8 +5,8 @@
 }
 [data-theme='dark'] {
 	--c1: red;
-	--c2: white;
-	--c3: black;
+	--c3: white;
+	--c2: black;
 }
 h1, h2, h3 {font-family: monospace; text-align: center;}
 body {font-family: monospace;font-size: 18pt; color: var(--c3);}
@@ -14,7 +14,7 @@ a {color: var(--c3);}
 
 
 ::placeholder{
-color: black;
+color: var(--c3);
 opacity: 1;
 
 }

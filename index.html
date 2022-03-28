@@ -23,6 +23,20 @@ function init(){startTime(); greet();}
 			<input id="searcher" type="text" name="" placeholder="search" />
 		</form>
 	</div>
+	<div align="center">
+	<input type="checkbox" id="mycheckbox" onchange="toggle()"/>
+	<script charset="utf-8">
+	function toggle() {
+		if(document.getElementById("mycheckbox").checked) {
+		console.log("checked")
+		document.documentElement.setAttribute('data-theme', 'dark')
+		}
+		else {
+		document.documentElement.setAttribute('data-theme', 'light')
+		}
+	}
+		</script>
+	</div>
 	
 <section class="basic-grid">
 
