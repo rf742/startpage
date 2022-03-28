@@ -86,7 +86,11 @@ var reddit = [
 	},
 	{
 		name: 'photography',
-		link: 'https://www.reddit.com/r/AnalogCommunity+analog+photography'
+		link: 'https://www.reddit.com/r/AnalogCommunity+analog+photography+cameras'
+	},
+	{
+		name: 'shorthand',
+		link: 'https://www.reddit.com/r/shorthand'
 	},
 ]
 

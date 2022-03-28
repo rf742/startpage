@@ -23,8 +23,10 @@ function init(){startTime(); greet();}
 			<input id="searcher" type="text" name="" placeholder="search" />
 		</form>
 	</div>
-	<div align="center">
+	<div align="center" class="checkbox">
+	<p>light/dark:
 	<input type="checkbox" id="mycheckbox" onchange="toggle()"/>
+	</p>
 	<script charset="utf-8">
 	function toggle() {
 		if(document.getElementById("mycheckbox").checked) {
