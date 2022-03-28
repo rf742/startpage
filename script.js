@@ -26,6 +26,11 @@ var searchkeys = [
 		"help":"Search Ubuntu man pages"
 	},
 	{
+		"code":"-f",
+		"url":"freebsd.org/cgi/man.cgi?query=",
+		"help":"Search FreeBSD man pages"
+	},
+	{
 		"code":"-r",
 		"url":"doc.rust-lang.org/std/index.html?search=",
 		"help":"Search the Rust docs"
@@ -76,16 +81,12 @@ var social = [
 
 var reddit = [
 	{
-		name: 'unixporn',
-		link: 'https://www.reddit.com/r/unixporn'
+		name: 'computer customization',
+		link: 'https://www.reddit.com/r/unixporn+startpages'
 	},
 	{
-		name: 'startpages',
-		link: 'https://www.reddit.com/r/startpages'
-	},
-	{
-		name: 'datahoarder',
-		link: 'https://www.reddit.com/r/datahoarder'
+		name: 'photography',
+		link: 'https://www.reddit.com/r/AnalogCommunity+analog+photography'
 	},
 ]
 
@@ -125,8 +126,8 @@ const literature = [
 
 function get_search() {
 	var stringy = document.getElementById("searcher").value;
-	var indicator = stringy.substr(0,2);
-	var searchstr = stringy.substr(2).trimStart();
+	var indicator = stringy.substr(0,stringy.indexOf(' '));
+	var searchstr = stringy.substr(stringy.indexOf(' ') + 1).trimStart();
 	var baseurl = 'https://';
 	let correctURL = searchkeys.find(correctURL => correctURL.code === indicator);
 	if (correctURL == null) {
