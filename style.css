@@ -9,7 +9,7 @@
 	--c2: #444444;
 }
 h1, h2, h3 {font-family: monospace; text-align: center;}
-body {font-family: monospace;font-size: 18pt; color: var(--c3);}
+body {font-family: monospace;font-size: 16pt; color: var(--c3);}
 a {color: var(--c3);}
 
 
@@ -29,7 +29,7 @@ opacity: 1;
 .basic-grid {
 
 display: grid;
-gap: 1rem;
+gap: 0;
 text-align: left;
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 }
@@ -41,7 +41,7 @@ background-color: var(--c2);}
 
 .card {
 /*background-color: rgba(0,0,0,0.5);*/
-padding-bottom: 1rem;
+padding-bottom: 0;
 }
 
 #helpCard {
