@@ -1,12 +1,12 @@
 :root {
 	--c1: red;
 	--c2: white;
-	--c3: black;
+	--c3: #444444;
 }
 [data-theme='dark'] {
 	--c1: red;
 	--c3: white;
-	--c2: black;
+	--c2: #444444;
 }
 h1, h2, h3 {font-family: monospace; text-align: center;}
 body {font-family: monospace;font-size: 18pt; color: var(--c3);}
