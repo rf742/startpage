@@ -1,11 +1,6 @@
 
 var searchkeys = [
 	{
-		"code":"-o",
-		"url":"man.openbsd.org/",
-		"help":"Search openBSD man pages"
-	},
-	{
 		"code":"-y",
 		"url":"www.youtube.com/results?search_query=",
 		"help":"Search YouTube"
@@ -21,12 +16,7 @@ var searchkeys = [
 		"help":"Search the python docs"
 	},
 	{
-		"code":"-u",
-		"url":"manpages.ubuntu.com/cgi-bin/search.py?q=",
-		"help":"Search Ubuntu man pages"
-	},
-	{
-		"code":"-f",
+		"code":"man",
 		"url":"freebsd.org/cgi/man.cgi?query=",
 		"help":"Search FreeBSD man pages"
 	},
