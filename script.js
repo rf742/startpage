@@ -26,6 +26,11 @@ var searchkeys = [
 		"help":"Search the Rust docs"
 	},
 	{
+		"code":"-c",
+		"url":"crates.io/search?q=",
+		"help":"Search rust crates"
+	},
+	{
 		"code":"-s",
 		"url":"www.stackoverflow.com/search?q=",
 		"help":"Search stackoverflow"
